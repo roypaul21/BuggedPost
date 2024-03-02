@@ -1,0 +1,1 @@
+import{j as t}from"./index-DCUZ8D66.js";function n(){return t.jsx("section",{style:{width:"100%",height:"100vh",display:"flex",justifyContent:"center",alignItems:"center",backgroundColor:"black",color:"white"},children:t.jsx("h1",{children:"PAGE NOT FOUND 404"})})}export{n as default};
