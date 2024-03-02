@@ -2,6 +2,19 @@ from config import mysql
 
 class BlogsModels:
 
+    def createBlogTable():
+        my_cursor = mysql.connection.cursor()
+        sql = """CREATE TABLE IF NOT EXISTS blog_bug.blogs (
+                blog_id INT NOT NULL AUTO_INCREMENT,
+                blog_title VARCHAR(1000) NOT NULL,
+                blog_content TEXT NOT NULL,
+                blog_created DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+                PRIMARY KEY (blog_id) 
+        )"""
+        my_cursor.execute(sql)
+        mysql.connection.commit()
+        my_cursor.close()
+
     def displayBlog():
         my_cursor = mysql.connection.cursor()
         sql = "SELECT * FROM blog_bug.blogs"
